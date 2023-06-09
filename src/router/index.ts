@@ -1,18 +1,18 @@
-import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router';
-import HelloWorld from '@/components/HelloWorld.vue';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import Home from '@/views/home/index.vue';
 
 // @ts-ignore
 const routes: Array<RouteRecordRaw> = [
   {
     path: '',
     redirect: (_) => {
-      return {path: '/home'};
+      return { path: '/home' };
     }
   },
   {
     path: '/home',
-    name: 'HelloWorld',
-    component: HelloWorld
+    name: 'Home',
+    component: Home
   },
   {
     path: '/about',
@@ -23,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/:currentPath(.*)*', // 路由未匹配到，进入这个
     redirect: (_) => {
-      return {path: '/404'};
+      return { path: '/404' };
     }
   }
 ];

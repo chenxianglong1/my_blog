@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import About from './views/About.vue'
 </script>
 
 <template>
-  <div>
-    dragonx
-  </div>
+  <router-view></router-view>
 </template>
 
 <style scoped>
