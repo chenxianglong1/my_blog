@@ -1,6 +1,6 @@
 <template>
   <div class="interview">
-    interview
+    <common-header></common-header>
   </div>
 </template>
 
@@ -13,11 +13,13 @@ import {
   nextTick
 } from "vue"
 import { ElMessage, ElMessageBox } from 'element-plus'
+import CommonHeader from '@/components/common/commonHeader.vue'
 
 import type { FormInstance, FormRules } from 'element-plus'
 
 export default defineComponent({
   components: {
+    CommonHeader
   },
   setup() {
     const formRef = ref<FormInstance>()
@@ -43,6 +45,8 @@ export default defineComponent({
 
 <style scoped lang="less">
 .interview {
+  height: 100%;
+  width: 100%;
 }
 
 </style>

@@ -5,7 +5,7 @@ import Home from '@/views/home/index.vue';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '',
-    redirect: (_) => {
+    redirect: (_: any) => {
       return { path: '/home' };
     }
   },
@@ -21,8 +21,14 @@ const routes: Array<RouteRecordRaw> = [
       import(/* webpackChunkName: "About" */ '@/views/About.vue')
   },
   {
+    path: '/interview',
+    name: 'Interview',
+    component: () =>
+      import(/* webpackChunkName: "Interview" */ '@/views/interview/index.vue')
+  },
+  {
     path: '/:currentPath(.*)*', // 路由未匹配到，进入这个
-    redirect: (_) => {
+    redirect: (_: any) => {
       return { path: '/404' };
     }
   }
@@ -30,7 +36,7 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(''),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to: any, from: any, savedPosition: any) {
     return {
       el: '#app',
       top: 0,
