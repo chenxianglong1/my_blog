@@ -27,6 +27,12 @@ const routes: Array<RouteRecordRaw> = [
       import(/* webpackChunkName: "Interview" */ '@/views/interview/index.vue')
   },
   {
+    path: '/contact',
+    name: 'Contact',
+    component: () =>
+      import(/* webpackChunkName: "Contact" */ '@/views/contact/index.vue')
+  },
+  {
     path: '/:currentPath(.*)*', // 路由未匹配到，进入这个
     redirect: (_: any) => {
       return { path: '/404' };

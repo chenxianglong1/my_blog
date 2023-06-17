@@ -10,5 +10,15 @@ export default defineConfig({
     alias: {
       '@': path.resolve('./src')
     }
-  }
+  },
+  server: {
+    host: '0.0.0.0',
+    port: 9494,
+    proxy: {
+      "/mc": {
+        target: "https://apaas-sit.meicloud.com",
+        changeOrigin: true,
+      },
+    },
+  },
 })

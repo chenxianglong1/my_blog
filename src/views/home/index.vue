@@ -69,7 +69,7 @@ export default defineComponent({
         },
         {
           label: '联系',
-          value: 'Call',
+          value: 'Contact',
         },
       ],
       activeMenu: 'Home'

@@ -60,10 +60,10 @@ export default defineComponent({
         },
         {
           label: '联系',
-          value: 'Call',
+          value: 'Contact',
         },
       ],
-      activeMenu: 'home'
+      activeMenu: 'Home'
     })
 
     const switchMenu = (item: any) => {
@@ -77,7 +77,7 @@ export default defineComponent({
     watch(
       () => router.currentRoute.value.name,
       (val: any) => {
-        console.log(val, '111', router)
+        state.activeMenu = val
       },
       { immediate: true }
     )
@@ -123,10 +123,12 @@ export default defineComponent({
     }
   }
   .menu {
-    width: 40%;display: flex;
+    width: 60%;
+    display: flex;
     flex-direction: row;
     height: 100px;
     line-height: 100px;
+    justify-content: flex-end;
     li {
       padding: 0 20px;
       span {
